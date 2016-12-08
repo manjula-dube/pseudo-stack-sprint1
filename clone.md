@@ -71,7 +71,7 @@ Your only option is to somehow clone the object.
 
             var temporary-storage = objectpassed.constructor(); // give temporary-storage the original obj's constructor
             for (var key in objectpassed) {
-            temporary-storage[key] = cloneObject(objectpassed[key]);
+            temporary-storage[key] = keepCloning(objectpassed[key]);
             }
 
             return temporary-storage;

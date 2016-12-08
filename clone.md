@@ -41,3 +41,51 @@ Now if you change employeeDetailsDuplicate.name, it will only affect employeeDet
 Diagramatic example 
 
 ![](https://s30.postimg.org/pjbzvamtd/Screen_Shot_2016_12_08_at_10_27_22_PM.png)
+
+###So  How to copy JavaScript object to new variable NOT by reference?
+
+        	
+Your only option is to somehow clone the object.
+
+See this stackoverflow question on how you can achieve this.
+
+        For simple JSON objects, the simplest way would be:
+
+        var objectIsNew = JSON.parse(JSON.stringify(objectIsOld));
+        //if you use jQuery, you can use:
+
+        In Jquery you can use:
+
+        // Shallow copy
+        var objectIsNew = jQuery.extend({}, objectIsOld);
+
+        // Deep copy
+        var objectIsNew = jQuery.extend(true, {}, objectIsOld);
+        
+ Pure javascript method to deep clone object
+ 
+            function keepCloning(objectpassed) {
+            if (objectpassed === null || typeof objectpassed !== 'object') {
+            return objectpassed;
+            }
+
+            var temporary-storage = objectpassed.constructor(); // give temp the original obj's constructor
+            for (var key in objectpassed) {
+            temporary-storage[key] = cloneObject(objectpassed[key]);
+            }
+
+            return temporary-storage;
+            }
+
+            var employeeDetailsOriginal = {  name: 'Manjula', age: 25, Profession: 'Software Engineer' };
+            
+            var employeeDetailsDuplicate = (keepCloning(employeeDetailsOriginal));
+            employeeDetailsOriginal.name = "NameChanged";
+
+            console.log(employeeDetailsOriginal);
+            console.log(employeeDetailsDuplicate);
+            
+            
+
+**Hope now you are clear with deep and shallow copy**
+        

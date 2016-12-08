@@ -69,7 +69,7 @@ See this stackoverflow question on how you can achieve this.
             return objectpassed;
             }
 
-            var temporary-storage = objectpassed.constructor(); // give temp the original obj's constructor
+            var temporary-storage = objectpassed.constructor(); // give temporary-storage the original obj's constructor
             for (var key in objectpassed) {
             temporary-storage[key] = cloneObject(objectpassed[key]);
             }

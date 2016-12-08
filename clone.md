@@ -38,3 +38,6 @@ But, creating a brand new variable by using the properties from the original emp
     var employeeDetailsDuplicate = { name: employeeDetailsOriginal.name, age: employeeDetailsOriginal.age, Profession: employeeDetailsOriginal.Profession}; //Deep copy!
 Now if you change employeeDetailsDuplicate.name, it will only affect employeeDetailsDuplicate and not employeeDetailsOriginal
 
+Diagramatic example 
+
+![](https://s30.postimg.org/pjbzvamtd/Screen_Shot_2016_12_08_at_10_27_22_PM.png)

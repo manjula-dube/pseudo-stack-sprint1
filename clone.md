@@ -47,7 +47,7 @@ Diagramatic example
         	
 Your only option is to somehow clone the object.
 
-See this stackoverflow question on how you can achieve this.
+
 
         For simple JSON objects, the simplest way would be:
 
